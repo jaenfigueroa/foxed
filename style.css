@@ -3,6 +3,7 @@
     padding: 0;
     font-family: sans-serif;
     text-decoration: none;
+    list-style: none;
 }
 
 /* HEADER */
@@ -56,11 +57,10 @@
 }
 
 /* NAV IFNFERIOR */
-.nav-inferior{
+/* .nav-inferior{
     width: 100%;
     display: flex;
     background: rgb(27, 255, 179);
-    /* padding: 2.5px; */
     border-bottom: 1px solid rgb(59, 59, 59);
 }
 .nav-inferior a{
@@ -74,7 +74,6 @@
 }
 .nav-inferior a:hover{
     background: rgba(0, 0, 0, 0.1);
-    /* border-radius: 5px; */
     padding: 7px 7px 7px 7px;
 }
 .nav-inferior i{
@@ -85,7 +84,108 @@
     padding: 0 8px;
     font-size: 19px;
     font-weight: lighter;
+} */
+
+/* ===================NAAAAAAAAAAAAAAAAAVVVVVVVVV======================= */
+
+  .nav-sub{
+    height: 37px;
+    background: rgb(70, 255, 178);
+    border-bottom: 1px solid black;
+  }
+  .nav-sub ul{
+    /* background-color: rgb(255, 70, 230); */
+    /* hace que se ponga en la derecha para que sea sin necesida de un grid */
+    float: left;
+    height: 37px;
+    /* margin-left: 10px; */
+  }
+  .nav-sub ul li{
+    background-color: rgb(70, 255, 178);
+    margin-bottom: none;
+    /* par la lista se ponga en fomra horizontal , y no vertical */
+    display: inline-block;
+  }
+  .nav-sub ul li a{
+    background: rgb(70, 255, 178);
+    color: rgb(59, 59, 59);
+    display: block;
+    padding: 0 10px;
+    line-height: 37px;
+    font-size: 18.5px;
+    /* transition: 0.5s; */
+  }
+  .nav-sub ul li a:hover{
+    color: rgb(59, 59, 59);
+    background-color: rgb(85, 249, 255);
+  }
+  .nav-sub ul li i:first-child{
+    /* background-color: blue; */
+    padding-right:8px;
 }
+.fa-caret-down{
+    /* background-color: blue; */
+    padding-left:5px;
+}
+.fa-caret-right{
+    padding-left: 85px;
+}
+  /* ========= */
+  .nav-sub ul ul{
+      /* para formar el rectangulo y no se sagan los elementos */
+    position: absolute;
+    height: auto;
+    /* animacion */
+    /* top: 170px; */
+    /* border-top: 0.5px solid #000000; */
+    opacity: 0;
+    /* parece no necesario */
+    visibility: hidden;
+    /* border: 1px solid black; */
+    /* border-top: none; */
+  }
+
+
+
+
+
+
+
+  .nav-sub ul li:hover > ul{
+    /* background-color: rgb(0, 255, 55); */
+    top: 95px;
+    opacity: 1;
+    visibility: visible;
+    /* transition: .5s linear; */
+  }
+  .nav-sub ul ul li{
+    /* background-color: rgb(255, 0, 0); */
+    width: 170px;
+    display: list-item;
+    position: relative;
+    border-left: 1.5px solid #000000;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.459);
+    /* border-right: 1px solid rgba(112, 112, 112, 0.459); */
+  }
+  .nav-sub ul ul li a{
+    /* line-height: 50px; */
+    /* padding: 80px; */
+  }
+  .nav-sub ul ul ul{
+    border-top: none;
+
+  }
+  .nav-sub ul ul ul li{
+    /* border-right: 1px solid #000000; */
+    /* border-bottom: 0.5px solid black; */
+    position: relative;
+    top: -95px;
+    left: 170px;
+  }
+
+
+
+
 
 /* ================MOVIMIENTOOOOOOOOOOOO======================= */
 .logo  h1,
@@ -381,6 +481,10 @@
 }
 
 @media screen and (max-width: 800px) {
+    .logo  h1
+    {
+        animation: movimiento 20s alternate-reverse 0;
+    }
     /* HEADER */
     .header{
         /* background: red; */
@@ -426,32 +530,27 @@
     .dddd {
         position: absolute;
     }
+    .imagenes-arriba{
+        display: none;
+    }
     /* .dddd .header {
         position: fixed;
     } */
-    .nav-inferior{
-        width: 100%;
+
+/* ======NAV NEW====== */
+    .nav-sub{
+        /* height: auto; */
+        display: none;
     }
-    .nav-inferior ul{
-        display: inline-block;
-    }
-    .nav-inferior a{
-        margin: auto;
-    }
-    .nav-inferior i{
-        font-size: 22px;
-    }
-    .nav-inferior h2{
-        font-size: 22px;
-        font-weight: normal;
-    }
+
+
 
     /* CUERPO */
     .cuerpo{
         width: 100%;
         display: block;
         margin: 0;
-        padding-top: 240px;
+        padding-top: 170px;
         padding-bottom: 10px;
     }
     .articulos{
@@ -483,6 +582,9 @@
         font-size: 28px;
     }
 
+    .imagen-abajo{
+        width: 90%;
+    }
     /* FOOTER */
     .subfooter{
         /* marging-bottom: 10px; */
@@ -499,14 +601,17 @@
         margin: 0;
         font-size: 22px;
     }
-    .redes-sociales h2{
-        font-size: 20px;
+    .footer h2{
         margin-top: 40px;
+        margin-bottom: 0;
     }
-    .redes-sociales ul{
+    .nav{
+        width: 80%;
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        gap: 16px;
+    }
+    .nav ul{
+        background-color: chartreuse;
     }
 
     /* FOOTER */
