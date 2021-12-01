@@ -550,7 +550,7 @@
         width: 100%;
         display: block;
         margin: 0;
-        padding-top: 170px;
+        padding-top: 160px;
         padding-bottom: 10px;
     }
     .articulos{
@@ -583,7 +583,7 @@
     }
 
     .imagen-abajo{
-        width: 90%;
+        width: 95%;
     }
     /* FOOTER */
     .subfooter{
@@ -612,6 +612,10 @@
     }
     .nav ul{
         background-color: chartreuse;
+    }
+    .nav ul li{
+        font-size: 18px;
+        text-align: center;
     }
 
     /* FOOTER */
